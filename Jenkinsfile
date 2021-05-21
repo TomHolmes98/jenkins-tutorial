@@ -17,7 +17,9 @@ pipeline{
                 }
             }
             stage('Deploy Chaperootodo'){
-                steps{
-                     sh "cd chaperootodo_client && sudo docker-compose pull && sudo -E DB_PASSWORD=${DB_PASSWORD} docker-compose up -d"
-        }
-}
+                    steps {             
+                            sh "cd chaperootodo_client && sudo docker-compose pull && sudo -E DB_PASSWORD=${DB_PASSWORD} docker-compose up -d"
+                    }
+                  }
+          }
+                
